@@ -1,217 +1,271 @@
-# Python Data Structures Course Projects
+# Python Data Structures — University of Michigan (Coursera)
 
-**Course:** Python Data Structures  
-**Specialization:** Python for Everybody  
-**University:** University of Michigan  
-**Platform:** Coursera
+This repository contains my programming assignments and exercises from the course **Python Data Structures**, part of the **Python for Everybody Specialization** offered by the University of Michigan on Coursera.  
 
----
+Course link:    
+https://www.coursera.org/learn/python-data  
 
-## Overview
+The course focuses on using Python built-in data structures to process and analyze data from files and structured text sources.  
 
-**Python Data Structures** is a course in the *Python for Everybody Specialization* offered by the University of Michigan on Coursera.
+---  
 
-The course introduces the core data structures of the Python programming language and builds on basic procedural programming concepts. It focuses on using built-in data structures such as **lists, dictionaries, and tuples**, along with **file operations and text processing**.
+# Repository Structure
 
-Through a series of programming assignments, the course emphasizes:
+Python Data Structures  
+│  
+├── Assignment6.5.py  
+├── Assignment7.1.py  
+├── Assignment7.2.py  
+├── Assignment8.4.py  
+├── Assignment9.4.py  
+├── Assignment10.2.py  
+└── README.md
 
-- Reading and processing text files
+Each script corresponds to a programming assignment from the course.  
 
-- Organizing data using Python data structures
+---  
 
-- Writing programs that analyze structured and semi-structured data
+# Course Overview
 
-- Handling runtime errors gracefully
+**Python Data Structures** introduces the core data structures of the Python programming language and demonstrates how they can be used to perform increasingly complex data analysis tasks.  
 
-This repository contains my solutions to selected programming assignments completed during the course.
+Key topics include:  
 
----
+- Reading and processing data from files  
+- String manipulation  
+- Lists and loops  
+- Dictionaries for frequency counting  
+- Tuples for sorting structured data  
+- Basic error handling  
 
-# Completed Assignments
+These concepts are fundamental for data processing and serve as a foundation for later courses in web data access and database programming.  
 
-## Assignment 6.5 — Word Frequency Count
+---  
 
-Reads a text file, splits each line into words, and counts how often each word appears.
+# Assignments
 
-The program:
+## Assignment 6.5 — Word Frequency Counter
 
-- Parses the file line by line
+This program reads a text file and counts how often each word appears.  
 
-- Splits lines into individual words
+Key features:  
 
-- Uses a dictionary to store word frequencies
+- File reading  
+- String splitting  
+- Dictionary frequency counting  
 
-- Outputs the most common words and their counts
+Example concept:  
 
-This exercise demonstrates **string processing, loops, and dictionary-based data aggregation**.
+```python
+counts = dict()
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+```
 
 ---
 
 ## Assignment 7.1 — Division with Error Handling
 
-Prompts the user for two numbers and computes their quotient.
+This script demonstrates Python exception handling.
 
-The program uses `try/except` to handle:
+Features:
 
-- Invalid numeric input
+- User input
 
-- Division by zero errors
+- Numeric conversion
 
-Concepts demonstrated:
+- Handling invalid input using `try / except`
 
-- Basic arithmetic operations
+Example concept:
 
-- Input conversion (`int` / `float`)
-
-- Python exception handling
+```python
+try:  
+    result = int(a) / int(b)  
+except:  
+    print("Invalid input")
+```
 
 ---
 
 ## Assignment 7.2 — File Reader (Uppercase)
 
-Prompts the user for a filename, opens the file, and reads its contents.
+This program:
 
-The program:
+1. Prompts the user for a filename
 
-- Reads the file line by line
+2. Opens the file
 
-- Converts each line to uppercase
+3. Prints each line in uppercase
 
-- Prints the result to the console
+Concepts practiced:
 
-Concepts demonstrated:
+- File I/O
 
-- File I/O (`open`, `read`)
+- String transformation
 
-- Looping through file lines
-
-- String transformation (`upper()`)
+- Iteration through file objects
 
 ---
 
-## Assignment 8.x — Email Domain Counter
+## Assignment 8.4 — Email Domain Counter
 
-Processes a mailbox file and extracts the sender’s email domain (the part after `@`).
+Processes a mailbox file and extracts email addresses from lines starting with `"From "`.
 
 The program:
 
-- Reads each line of the mailbox file
+- Extracts the email address
 
-- Extracts email addresses
-
-- Splits the domain from the address
-
-- Uses a dictionary to count occurrences
+- Counts occurrences of each domain
 
 Concepts demonstrated:
 
-- String splitting
+- String parsing
 
-- Text parsing
+- Dictionaries
 
-- Dictionary counting
+- Data aggregation
 
 ---
 
-## Assignment 9.4 — Structured Data Parsing
+## Assignment 9.4 — Word Frequency Analysis
 
-Reads structured data (such as JSON or formatted text) and counts specific elements.
+This program analyzes word usage in a text file.
 
-Typical tasks include:
+Steps:
 
-- Parsing JSON structures
+1. Read the file
 
-- Extracting values
+2. Normalize words
 
-- Counting occurrences of specific items
+3. Count occurrences using dictionaries
 
-Concepts demonstrated:
+4. Display results
 
-- Working with structured data
+Key learning points:
 
-- Data extraction
+- Text processing
 
-- Iteration over nested structures
+- Dictionary operations
+
+- Loop-based aggregation
 
 ---
 
 ## Assignment 10.2 — Most Prolific Email Sender
 
-This assignment processes a mailbox file such as `mbox-short.txt`.
+This assignment analyzes a mailbox dataset to determine which email address sent the most messages.
 
-The program:
+Steps:
 
-1. Reads the mailbox file line by line
+1. Read mailbox file line by line
 
-2. Identifies lines starting with `"From "`
+2. Identify lines beginning with `"From "`
 
-3. Extracts the sender’s email address
+3. Extract email addresses
 
-4. Counts the number of messages sent by each address using a dictionary
+4. Count frequency with a dictionary
 
-5. Finds and prints the email address with the highest message count
+5. Find the email with the maximum count
 
-Concepts demonstrated:
+Example logic:
 
-- Text parsing
+```python
+bigcount = None  
+bigword = None
 
-- Dictionary frequency counting
+for word, count in counts.items():  
+ if bigcount is None or count > bigcount:  
+ bigword = word  
+ bigcount = count
+```
 
-- Iterating over key-value pairs
+Output example:
 
-- Finding the maximum value in a dataset
-
----
-
-# Technical Skills Demonstrated
-
-These projects highlight core Python skills and fundamental computer science concepts.
-
-## File I/O
-
-Opening and reading text files line by line using:
-
-`open()`
-`for line in file`
-
-Used in nearly every assignment, including reading email logs and word lists.
+`cwen@iupui.edu 5`
 
 ---
 
-## String Processing
+# Skills Demonstrated
 
-Common operations include:
+This project demonstrates several core programming concepts.
 
-- Splitting lines into words (`split()`)
+### Python Fundamentals
 
-- Converting text (`upper()`)
+- Variables and expressions
 
-- Extracting substrings (such as domains after `@`)
+- Conditional statements
+
+- Loops
+
+### Data Structures
+
+- Lists
+
+- Dictionaries
+
+- Tuples
+
+### File Processing
+
+- Reading text files
+
+- Parsing structured text
+
+- Processing log-style data
+
+### Error Handling
+
+- Handling invalid input
+
+- Preventing runtime errors
+
+---
+
+# Technologies Used
+
+- Python 3
+
+- Standard Python libraries
+
+- Text file processing
 
 ---
 
-## Data Structures
+# Running the Programs
 
-Key Python data structures used:
+Example:
 
-- **Lists** — collecting and sorting items
+`python Assignment10.2.py`
 
-- **Dictionaries** — counting frequencies using key/value pairs
+Some assignments require input files such as:
 
-- **Tuples** — sometimes used when sorting dictionary items
+`mbox-short.txt`
+
+Make sure the data file is located in the same directory as the Python script.
+
+---
+
+# Related Courses in the Specialization
+
+This course is part of the **Python for Everybody Specialization**, which includes:
+
+1. Programming for Everybody (Getting Started with Python)
+
+2. Python Data Structures
+
+3. Using Python to Access Web Data
+
+4. Using Databases with Python
+
+5. Capstone: Retrieving, Processing, and Visualizing Data with Python
+
+The specialization introduces programming fundamentals and progresses toward web data processing and database applications.
 
 ---
 
-## Control Flow
+# Author
 
-Programs rely on:
+**GitHub:**  
+[yangzkang · GitHub](https://github.com/yangzkang)
 
-- Loops (`for`, `while`)
-
-- Conditional statements (`if`)
-
-- Error handling (`try / except`)
-
-These control structures allow programs to process files, analyze data, and produce meaningful output.
-
----
+This repository documents my learning progress in Python programming and data processing.
