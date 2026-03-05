@@ -1,292 +1,217 @@
-# ```markdown
+# Python Data Structures Course Projects
 
-# Course: Python Data Structures  
+**Course:** Python Data Structures  
+**Specialization:** Python for Everybody  
+**University:** University of Michigan  
+**Platform:** Coursera
 
-# Specialization: Python for Everybody  
+---
 
-# University: University of Michigan  
+## Overview
 
-# Platform: Coursera
+**Python Data Structures** is a course in the *Python for Everybody Specialization* offered by the University of Michigan on Coursera.
 
+The course introduces the core data structures of the Python programming language and builds on basic procedural programming concepts. It focuses on using built-in data structures such as **lists, dictionaries, and tuples**, along with **file operations and text processing**.
 
+Through a series of programming assignments, the course emphasizes:
 
+- Reading and processing text files
 
+- Organizing data using Python data structures
 
-# \# Python Data Structures Course Projects
+- Writing programs that analyze structured and semi-structured data
 
-# 
+- Handling runtime errors gracefully
 
-# \## Overview
+This repository contains my solutions to selected programming assignments completed during the course.
 
-# 
+---
 
-# \*\*Python Data Structures\*\* is a course in the \*Python for Everybody Specialization\* offered by the University of Michigan on Coursera.
+# Completed Assignments
 
-# 
+## Assignment 6.5 — Word Frequency Count
 
-# The course introduces the core data structures of the Python programming language and builds on basic procedural programming concepts. It focuses on using built-in data structures such as \*\*lists, dictionaries, and tuples\*\*, along with \*\*file operations and text processing\*\*.
+Reads a text file, splits each line into words, and counts how often each word appears.
 
-# 
+The program:
 
-# Through a series of programming assignments, the course emphasizes:
+- Parses the file line by line
 
-# 
+- Splits lines into individual words
 
-# \- Reading and processing text files
+- Uses a dictionary to store word frequencies
 
-# \- Organizing data using Python data structures
+- Outputs the most common words and their counts
 
-# \- Writing programs that analyze structured and semi-structured data
+This exercise demonstrates **string processing, loops, and dictionary-based data aggregation**.
 
-# \- Handling runtime errors gracefully
+---
 
-# 
+## Assignment 7.1 — Division with Error Handling
 
-# This repository contains my solutions to selected programming assignments completed during the course.
+Prompts the user for two numbers and computes their quotient.
 
-# 
+The program uses `try/except` to handle:
 
-# ---
+- Invalid numeric input
 
-# 
+- Division by zero errors
 
-# \# Completed Assignments
+Concepts demonstrated:
 
-# 
+- Basic arithmetic operations
 
-# \### Assignment 6.5: Word Frequency Count
+- Input conversion (`int` / `float`)
 
-# 
+- Python exception handling
 
-# Reads a text file, splits each line into words, and counts how often each word appears. The program uses a loop to parse the file and a dictionary (or list) to track word frequencies, then outputs the most common words and their counts.
+---
 
-# 
+## Assignment 7.2 — File Reader (Uppercase)
 
-# This exercise demonstrates \*\*string processing, loops, and dictionary usage for data aggregation\*\*.
+Prompts the user for a filename, opens the file, and reads its contents.
 
-# 
+The program:
 
-# ---
+- Reads the file line by line
 
-# 
+- Converts each line to uppercase
 
-# \### Assignment 7.1: Division with Error Handling
+- Prints the result to the console
 
-# 
+Concepts demonstrated:
 
-# Prompts the user for two numbers and computes their quotient. It uses `try/except` to catch invalid input or division-by-zero errors.
+- File I/O (`open`, `read`)
 
-# 
+- Looping through file lines
 
-# This shows \*\*basic arithmetic, input conversion, and exception handling in Python\*\*.
+- String transformation (`upper()`)
 
-# 
+---
 
-# ---
+## Assignment 8.x — Email Domain Counter
 
-# 
+Processes a mailbox file and extracts the sender’s email domain (the part after `@`).
 
-# \### Assignment 7.2: File Reader (Uppercase)
+The program:
 
-# 
+- Reads each line of the mailbox file
 
-# Prompts for a filename, opens the file, and reads its contents. The program prints each line in uppercase.
+- Extracts email addresses
 
-# 
+- Splits the domain from the address
 
-# It uses `try/except` to handle the case where the file is not found, reinforcing \*\*file I/O and robust error checking using Python exceptions\*\*.
+- Uses a dictionary to count occurrences
 
-# 
+Concepts demonstrated:
 
-# ---
+- String splitting
 
-# 
+- Text parsing
 
-# \### Assignment 8.4: Unique Words
+- Dictionary counting
 
-# 
+---
 
-# Asks for a file name, reads the file, and builds a list of \*\*all unique words\*\* found in the file. After reading, it sorts the list alphabetically and prints it.
+## Assignment 9.4 — Structured Data Parsing
 
-# 
+Reads structured data (such as JSON or formatted text) and counts specific elements.
 
-# This assignment demonstrates \*\*file input, string splitting, list operations, and duplicate removal\*\*.
+Typical tasks include:
 
-# 
+- Parsing JSON structures
 
-# ---
+- Extracting values
 
-# 
+- Counting occurrences of specific items
 
-# \### Assignment 8.5: Email Domain Counter
+Concepts demonstrated:
 
-# 
+- Working with structured data
 
-# Opens a mailbox file (e.g. `mbox-short.txt`), scans lines that start with `"From "`, and extracts the sender’s email domain (the part after `@`). It then counts how many messages come from each domain.
+- Data extraction
 
-# 
+- Iteration over nested structures
 
-# The program demonstrates \*\*text parsing, looping through structured lines, and using a dictionary to tally counts\*\*.
+---
 
-# 
+## Assignment 10.2 — Most Prolific Email Sender
 
-# ---
+This assignment processes a mailbox file such as `mbox-short.txt`.
 
-# 
+The program:
 
-# \### Assignment 10.2: Most Prolific Email Sender
+1. Reads the mailbox file line by line
 
-# 
+2. Identifies lines starting with `"From "`
 
-# Opens a mailbox file (e.g. `mbox-short.txt`), scans lines that start with `"From "`, and extracts the sender’s email address. The program uses a dictionary to count how many messages each sender has sent.
+3. Extracts the sender’s email address
 
-# 
+4. Counts the number of messages sent by each address using a dictionary
 
-# After processing the file, it iterates through the dictionary to find and print the email address with the highest count.
+5. Finds and prints the email address with the highest message count
 
-# 
+Concepts demonstrated:
 
-# This exercise demonstrates \*\*text parsing, dictionary-based frequency counting, and iterating over key-value pairs to determine the maximum value\*\*.
+- Text parsing
 
-# 
+- Dictionary frequency counting
 
-# ---
+- Iterating over key-value pairs
 
-# 
+- Finding the maximum value in a dataset
 
-# \# Technical Skills Demonstrated
+---
 
-# 
+# Technical Skills Demonstrated
 
-# These assignments highlight core Python programming skills and fundamental computing concepts.
+These projects highlight core Python skills and fundamental computer science concepts.
 
-# 
+## File I/O
 
-# \### File I/O
+Opening and reading text files line by line using:
 
-# 
+`open()`
+`for line in file`
 
-# Opening and reading text files line by line using `open()` and loops. Many assignments involve processing structured text files such as mailbox logs.
+Used in nearly every assignment, including reading email logs and word lists.
 
-# 
+---
 
-# \### String Processing
+## String Processing
 
-# 
+Common operations include:
 
-# Parsing lines using `split()`, trimming text, converting strings, and extracting substrings such as email addresses and domains.
+- Splitting lines into words (`split()`)
 
-# 
+- Converting text (`upper()`)
 
-# \### Data Structures
+- Extracting substrings (such as domains after `@`)
 
-# 
+---
 
-# Using \*\*lists\*\* to collect and organize data and \*\*dictionaries\*\* to perform frequency counting and data aggregation.
+## Data Structures
 
-# 
+Key Python data structures used:
 
-# \### Control Flow
+- **Lists** — collecting and sorting items
 
-# 
+- **Dictionaries** — counting frequencies using key/value pairs
 
-# Designing programs using loops and conditional statements to process data systematically.
+- **Tuples** — sometimes used when sorting dictionary items
 
-# 
+---
 
-# \### Exception Handling
+## Control Flow
 
-# 
+Programs rely on:
 
-# Using `try/except` blocks to handle invalid input and file access errors.
+- Loops (`for`, `while`)
 
-# 
+- Conditional statements (`if`)
 
-# \### Core Python Programming
+- Error handling (`try / except`)
 
-# 
+These control structures allow programs to process files, analyze data, and produce meaningful output.
 
-# Practicing essential Python syntax including:
-
-# 
-
-# \- functions
-
-# \- variables
-
-# \- loops
-
-# \- conditional statements
-
-# \- user input and output
-
-# 
-
-# ---
-
-# 
-
-# \# How to Run
-
-# 
-
-# Each assignment is implemented as an independent Python script.
-
-# 
-
-# \## Requirements
-
-# 
-
-# Python 3.x
-
-# 
-
-# \## Running a Script
-
-# 
-
-# Example:
-
-# 
-
-# ```bash
-
-# python3 assignment6\_5.py
-
-# The program will prompt for required inputs (such as a filename or numbers).
-
-# Ensure that required data files (e.g. mbox-short.txt) are located in the same directory or provide a full path.
-
-# 
-
-# Learning Outcomes
-
-# 
-
-# Through completing these assignments, I strengthened my foundation in Python programming and basic data processing techniques.
-
-# 
-
-# The projects provided practical experience in:
-
-# 
-
-# parsing and analyzing text data
-
-# 
-
-# using Python data structures effectively
-
-# 
-
-# writing reliable programs with error handling
-
-# 
-
-# designing simple data analysis scripts
-
-# 
-
-# These exercises helped reinforce fundamental computer science concepts and prepared me for more advanced topics such as algorithms, data analysis, and software development.
-
+---
